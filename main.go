@@ -166,6 +166,7 @@ func executeReserve() {
 			if orderId := submitConfirm(timestamp); orderId != "" {
 				log.Printf(">>> 预约成功！订单编号：%v", orderId)
 				exitChan <- struct{}{}
+				break
 			}
 		}
 	}
